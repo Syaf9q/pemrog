@@ -1,1 +1,74 @@
-oajsdoasidjafs
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LP</title>
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div class="hero">
+            <div class="card">
+                <h2>FORM INPUT</h2>
+                <p>@</p>
+                <div id="alert"></div>
+                <div id="form-wrap">
+                    <form>
+                        <label class="form-label" for="fname">Nama Depan</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Your Name..."
+                            id="nama-depan"
+                        />
+                        <label class="form-label" for="lname"
+                            >Nama Belakang</label
+                        >
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Your Last Name..."
+                            id="nama-belakang"
+                        />
+                        <label class="form-label" for="lname"
+                            >Tanggal Lahir</label
+                        >
+                        <input
+                            type="date"
+                            class="input-form"
+                            id="tanggal-lahir"
+                        />
+                        <label class="form-label" for="lname">Email</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Emailmu"
+                            id="email"
+                        />
+                        <label class="form-label" for="lname">Nomor HP</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Nomor HP mu"
+                            id="noHP"
+                        />
+                        <div class="form">
+                            <img src="/emptyprofile.png" id="image" />
+                            <label for="input-file" class="image-input">
+                                upload image
+                            </label>
+                            <input
+                                type="file"
+                                accept="image/jpg image/png image/jpeg"
+                                id="input-file"
+                            />
+                        </div>
+                        <br /><br />
+                        <button type="button" id="submit-button">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
