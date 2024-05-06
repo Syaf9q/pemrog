@@ -91,5 +91,17 @@ table,
 th,
 td {
     padding: 10px 0px;
+    border: 1px black;
+}
+
+img {
     border: 1px solid black;
+}
+
+.table-form {
+    text-align: end;
+}
+
+.table-cred {
+    padding-left: 100px;
 }
