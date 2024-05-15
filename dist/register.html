@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LP</title>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap"
+            rel="stylesheet"
+        />
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="output.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="bg-gradient-to-b from-[#fbc2eb] to-[#a6c1ee]">
+        <header class="bg-white md:px-4 pr-3">
+            <nav class="flex justify-between items-center p-2">
+                <div class="">
+                    <img
+                        class="w-60"
+                        src="/asset/bae-systems-logo.svg"
+                        alt="logo"
+                    />
+                </div>
+
+                <div
+                    class="nav-menu duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center"
+                >
+                    <ul
+                        class="flex md:flex-row flex-col md:items-center md:gap-[6vw] gap-6"
+                    >
+                        <li>
+                            <a class="hover:text-gray-800" href="index.html"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-800" href="#">Product</a>
+                        </li>
+                        <li>
+                            <a class="hover:text-gray-800" href="#">Pricing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="bg-[#a6c1ee] text-white px-4 rounded-full hover:bg-[#6c8dc5]"
+                    >
+                        Sign In
+                    </button>
+                    <ion-icon
+                        onclick="toggleMenu(this)"
+                        name="menu-outline"
+                        class="md:hidden text-3xl cursor-pointer"
+                    ></ion-icon>
+                </div>
+            </nav>
+        </header>
+        <div class="hero">
+            <div class="card">
+                <h2>FORM INPUT</h2>
+                <p>@</p>
+                <div id="alert"></div>
+                <div id="form-wrap">
+                    <form>
+                        <label class="form-label" for="fname">Nama Depan</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Nama Depanmu..."
+                            id="nama-depan"
+                            required
+                        />
+                        <label class="form-label" for="lname"
+                            >Nama Belakang</label
+                        >
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Nama Belakangmu..."
+                            id="nama-belakang"
+                            required
+                        />
+                        <label class="form-label" for="lname"
+                            >Tanggal Lahir</label
+                        >
+                        <input
+                            type="date"
+                            class="input-form"
+                            id="tanggal-lahir"
+                            required
+                        />
+                        <label class="form-label" for="lname">Email</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Emailmu"
+                            id="email"
+                            required
+                        />
+                        <label class="form-label" for="lname">Nomor HP</label>
+                        <input
+                            type="text"
+                            class="input-form"
+                            placeholder="Nomor HP mu"
+                            id="noHP"
+                            required
+                        />
+                        <label class="form-label" for="lname">Umur</label>
+                        <input
+                            type="number"
+                            class="input-form"
+                            placeholder="Umur mu"
+                            id="umur"
+                            required
+                        />
+                        <label class="form-label" for="lname">NIK</label>
+                        <input
+                            type="number"
+                            class="input-form"
+                            placeholder="NIKmu"
+                            id="NIK"
+                            minlength="16"
+                            required
+                        />
+                        <div class="form">
+                            <label
+                                for="input-file"
+                                class="image-input primary-button"
+                            >
+                                upload image
+                            </label>
+                            <img src="/emptyprofile.png" id="image" />
+                            <input
+                                type="file"
+                                accept="image/jpg image/png image/jpeg"
+                                id="input-file"
+                            />
+                        </div>
+                        <br /><br />
+                        <button
+                            type="button"
+                            id="submit-button"
+                            class="primary-button"
+                        >
+                            SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../index.js"></script>
+</html>
