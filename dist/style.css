@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+:root {
+    /* COLORS  */
+    /* primary */
+    --primary-0: #f0efff;
+    --primary-50: #d8d6ff;
+    --primary-100: #c1beff;
+    --primary-200: #aaa5ff;
+    --primary-300: #938dff;
+    --primary-400: #7b74ff;
+    /* main */
+    --primary-500: #645cff;
+    --primary-600: #554ed9;
+    --primary-700: #4640b3;
+    --primary-800: #37338c;
+    --primary-900: #282566;
+    --primary-1000: #191740;
+    --primary-1100: #0a0919;
+    /* grey */
+    --grey-0: #fafbfc;
+    --grey-50: #f2f4f8;
+    --grey-100: #eaedf3;
+    --grey-200: #e2e7ef;
+    --grey-300: #dbe0ea;
+    --grey-400: #d3dae6;
+    --grey-500: #cbd3e1;
+    --grey-600: #adb3bf;
+    --grey-700: #8e949e;
+    --grey-800: #70747c;
+    --grey-900: #51545a;
+    --grey-1000: #333538;
+    --grey-1100: #141516;
+
+    /* rest */
+    --black: #222;
+    --white: #fff;
+    --red-light: #f8d7da;
+    --red-dark: #842029;
+    --green-light: #d1e7dd;
+    --green-dark: #0f5132;
+
+    /* typography */
+    --headingFont: "Inconsolata", monospace;
+    --bodyFont: "Montserrat", sans-serif;
+    --smallText: 0.7em;
+    /* rest */
+    --backgroundColor: var(--grey-50);
+    --textColor: var(--grey-1000);
+    --borderRadius: 0.25rem;
+    --letterSpacing: 1px;
+    --transition: 0.3s ease-in-out all;
+    --max-width: 1120px;
+    --fixed-width: 600px;
+    /* box shadows */
+    --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
 * {
     font-family: "Kanit", sans-serif;
     font-weight: 400;
@@ -6,6 +74,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+
 .hero {
     padding: 120px;
     /* background-color: #d1d1d1; */
@@ -83,7 +158,7 @@ form {
 }
 
 .cred-showcase {
- margin: 15px;
+    margin: 15px;
 }
 
 #alert {
@@ -213,10 +288,107 @@ input::-webkit-inner-spin-button {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     padding: 10px 10px 0px 10px;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
     text-align: center;
     background-color: #f9dbdb;
+}
+
+/* SINGLE product */
+
+.product-dom {
+    margin: 10px;
+    display: grid;
+    gap: 1rem;
+}
+
+.product-container {
+    width: 100%;
+    width: 90vw;
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.single-prod-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-prod {
+    padding: 1rem 2.5rem;
+    background: var(--white);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow-2);
+    transition: var(--transition);
+}
+.single-prod:hover {
+    box-shadow: var(--shadow-4);
+}
+.single-prod h5 {
+    margin-bottom: 0;
+}
+.single-prod span {
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: -1.25rem;
+    margin-right: 1.5rem;
+}
+.single-prod .fa-check-circle {
+    font-size: 1rem;
+    color: var(--green-dark);
+    visibility: hidden;
+}
+
+/* product edit form */
+
+@media screen and (min-width: 576px) {
+    .form-control {
+        display: flex;
+    }
+    .task-input {
+        border-radius: 0;
+        border-top-left-radius: var(--borderRadius);
+        border-bottom-left-radius: var(--borderRadius);
+    }
+    .submit-btn {
+        margin-top: 0;
+        width: 175px;
+        border-radius: 0;
+        border-top-right-radius: var(--borderRadius);
+        border-bottom-right-radius: var(--borderRadius);
+    }
+}
+
+.single-task-form {
+    width: 90vw;
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    margin-top: 6rem;
+}
+
+.single-task-form .form-control {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    justify-items: start;
+    gap: 0 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.task-edit-completed {
+    width: auto;
+}
+
+.task-edit-completed {
+    width: auto;
+}
+
+.single-task-form .form-alert {
+    text-align: center;
+    margin-top: 1rem;
 }

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LP</title>
         <!-- font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +14,13 @@
         <!-- stylesheet -->
         <link rel="stylesheet" href="output.css" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="main.css" />
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         />
     </head>
-    <body
-        class="text-2xl bg-gradient-to-b from-[#fbc2eb] to-[#a6c1ee] h-screen"
-    >
+    <body class="bg-gradient-to-b from-[#fbc2eb] to-[#a6c1ee]">
         <header class="bg-white md:px-4 pr-3">
             <nav class="flex justify-between items-center p-2">
                 <div class="">
@@ -34,12 +34,12 @@
                         class="flex md:flex-row flex-col md:items-center md:gap-[6vw] gap-6"
                     >
                         <li>
-                            <a class="hover:text-gray-800" href="#">Home</a>
+                            <a class="hover:text-gray-800" href="index.html"
+                                >Home</a
+                            >
                         </li>
                         <li>
-                            <a class="hover:text-gray-800" href="products.html"
-                                >Product</a
-                            >
+                            <a class="hover:text-gray-800" href="#">Product</a>
                         </li>
                         <li>
                             <a class="hover:text-gray-800" href="#">Pricing</a>
@@ -48,7 +48,6 @@
                 </div>
                 <div class="flex items-center gap-4">
                     <button
-                        onclick="location.href='register.html'"
                         class="bg-[#a6c1ee] text-white px-4 rounded-full hover:bg-[#6c8dc5]"
                     >
                         Sign In
@@ -61,36 +60,36 @@
                 </div>
             </nav>
         </header>
+        <section class="product-container" style="display: grid">
+            <a
+                href="create.html"
+                style="
+                    background-color: red;
+                    padding: 3px 10px;
+                    border-radius: 15px;
+                    text-align: center;
+                    justify-self: start;
+                "
+            >
+                <i class="fa-solid fa-arrow-up"></i>button</a
+            >
+            <div class="product-dom"></div>
+        </section>
+
         <footer class="bg-white">
             <p>&copy; 2024 Syafiq Yamin</p>
         </footer>
         <script
-            type="module"
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+            src="https://kit.fontawesome.com/b62744c27c.js"
+            crossorigin="anonymous"
         ></script>
         <script
-            nomodule
-            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         ></script>
-        <script>
-            const navMenu = document.querySelector(".nav-menu");
-            let active = false;
-            function toggleMenu(i) {
-                i.name = i.name === "menu-outline" ? "close" : "menu-outline";
-                navMenu.classList.toggle("top-[6%]");
-                navMenu.classList.toggle("top-[-100%]");
-                // if(!active){
-                //     i.name = 'close'
-                //     navMenu.classList.remove('top-[-100%]')
-                //     navMenu.classList.add('top-[6%]')
-                //     active = true
-                // }else{
-                //     i.name = 'menu-outline'
-                //     navMenu.classList.remove('top-[6%]')
-                //     navMenu.classList.add('top-[-100%]')
-                //     active = false
-                // }
-            }
-        </script>
+        <!-- <script src="./index.js"></script> -->
+        <script src="./products.js"></script>
     </body>
 </html>
