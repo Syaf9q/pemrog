@@ -1,95 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" class="min-h-max m-0">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>LP</title>
-        <!-- font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap"
-            rel="stylesheet"
-        />
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="output.css" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="main.css" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-        />
-    </head>
-    <body class="bg-gradient-to-b from-[#fbc2eb] to-[#a6c1ee]">
-        <header class="bg-white md:px-4 pr-3">
-            <nav class="flex justify-between items-center p-2">
-                <div class="">
-                    <img class="w-60" src="./bae-systems-logo.svg" alt="logo" />
-                </div>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LP</title>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poetsen+One&display=swap"
+   rel="stylesheet"
+  />
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link rel="stylesheet" href="main.css" /> -->
+  <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
+ </head>
+ <body class="bg-gradient-to-b from-[#fbc2eb] to-[#a6c1ee]">
+  <header class="bg-white md:px-4 pr-3">
+   <nav class="flex justify-between items-center p-2">
+    <div class="">
+     <img class="w-60" src="./bae-systems-logo.svg" alt="logo" />
+    </div>
 
-                <div
-                    class="nav-menu duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center"
-                >
-                    <ul
-                        class="flex md:flex-row flex-col md:items-center md:gap-[6vw] gap-6"
-                    >
-                        <li>
-                            <a class="hover:text-gray-800" href="index.html"
-                                >Home</a
-                            >
-                        </li>
-                        <li>
-                            <a class="hover:text-gray-800" href="#">Product</a>
-                        </li>
-                        <li>
-                            <a class="hover:text-gray-800" href="#">Pricing</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button
-                        class="bg-[#a6c1ee] text-white px-4 rounded-full hover:bg-[#6c8dc5]"
-                    >
-                        Sign In
-                    </button>
-                    <ion-icon
-                        onclick="toggleMenu(this)"
-                        name="menu-outline"
-                        class="md:hidden text-3xl cursor-pointer"
-                    ></ion-icon>
-                </div>
-            </nav>
-        </header>
-        <section class="product-container" style="display: grid">
-            <a
-                href="create.html"
-                style="
-                    background-color: red;
-                    padding: 3px 10px;
-                    border-radius: 15px;
-                    text-align: center;
-                    justify-self: start;
-                "
-            >
-                <i class="fa-solid fa-arrow-up"></i>button</a
-            >
-            <div class="product-dom"></div>
-        </section>
+    <div
+     class="nav-menu duration-500 md:static absolute bg-white md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center"
+    >
+     <ul class="flex md:flex-row flex-col md:items-center md:gap-[6vw] gap-6">
+      <li>
+       <a class="hover:text-gray-800" href="index.html">Home</a>
+      </li>
+      <li>
+       <a class="hover:text-gray-800" href="#">Product</a>
+      </li>
+      <li>
+       <a class="hover:text-gray-800" href="#">Pricing</a>
+      </li>
+     </ul>
+    </div>
+    <div class="flex items-center gap-4">
+     <button
+      onclick="location.href='register.html'"
+      class="bg-[#a6c1ee] text-white px-4 rounded-full hover:bg-[#6c8dc5]"
+     >
+      Sign In
+     </button>
+     <ion-icon
+      onclick="toggleMenu(this)"
+      name="menu-outline"
+      class="md:hidden text-3xl cursor-pointer"
+     ></ion-icon>
+    </div>
+   </nav>
+  </header>
+  <section class="product-container" style="display: grid">
+   <button class="primary-button" onclick="location.href='create.html'">
+    <i class="fa-solid fa-arrow-up"></i>Add a product
+   </button>
+   <div class="product-dom"></div>
+  </section>
 
-        <footer class="bg-white">
-            <p>&copy; 2024 Syafiq Yamin</p>
-        </footer>
-        <script
-            src="https://kit.fontawesome.com/b62744c27c.js"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <!-- <script src="./index.js"></script> -->
-        <script src="./products.js"></script>
-    </body>
+  <footer class="bg-white">
+   <p>&copy; 2024 Syafiq Yamin</p>
+  </footer>
+  <script
+   src="https://kit.fontawesome.com/b62744c27c.js"
+   crossorigin="anonymous"
+  ></script>
+  <script
+   src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+   integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"
+  ></script>
+  <!-- <script src="./index.js"></script> -->
+  <script src="./products.js"></script>
+ </body>
 </html>
